@@ -5,13 +5,14 @@ class Get extends Component{
     {
         super()
         this.state={
-            list:[]
+            list:[],
+            errmsg:''
         }
     }
     componentDidMount()
     {
-        axios.get('https://jsonplaceholder.typicode.com/todoshttps://jsonplaceholder.typicode.com/todos')
-        .then(res=>{
+        axios.get('https://jsonplaceholder.typicode.com/todos') //use axios to fetch data from server
+        .then(res=>{   //axios always behave like promises, so we can use .then and .catch
             console.log(res)
             this.setState({
                 list:res.data
@@ -20,13 +21,23 @@ class Get extends Component{
         .catch(err=>
             {
                 console.log(err)
+                this.setState({
+                    errmsg:"Error happened"
+                })
             })
     }
     render()
     {
+        let {list,errmsg}=this.state
         return(
             <div>
-
+                List of Data
+                {
+                    list.length ? list.map(lis=><div key={lis.id}>Title : {lis.title} Author : {lis.userId}</div>) : null //objects are not valid as react child, so use array using map and access to keys
+                }
+                {
+                    errmsg?<div>{errmsg}</div>:null
+                }
             </div>
         )
     }

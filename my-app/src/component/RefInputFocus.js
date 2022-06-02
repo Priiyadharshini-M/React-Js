@@ -1,3 +1,4 @@
+//create ref in parent component...this is parent component
 import React,{Component}from "react";
 import RefForward from "./RefForward";
 import Refss from "./Refss";
@@ -9,7 +10,7 @@ class RefInputFocus extends Component{
     }
     focusHandle=()=>
     {
-        this.RefFocus.current.focusInput() //Ref to child component from a parent component-->Refss.js
+        this.RefFocus.current.focusInput() //Ref to child component from a parent component-->i.e from this comp to Refss.js
     }
     focusHandle2=()=>
     {

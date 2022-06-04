@@ -22,7 +22,13 @@ import './App.css';
 
 import {Provider} from 'react-redux'; //to connect react and redux
 import store from './react-redux/Store';
-import CakeContainer from './react-redux/CakeContainer';
+// import CakeContainer from './react-redux/CakeContainer';
+// import HooksCakeContainer from './react-redux/HooksCakeContainer';
+// import IceContainer from './react-redux/IceContainer';
+// import NewContainer from './react-redux/NewContainer';
+// import MapStateToProp from './react-redux/MapStateToProp';
+import UserContainer from './react-redux/UserContainer';
+
 function App() {
   return (
 
@@ -50,7 +56,13 @@ function App() {
       {/* <Doc1 />
       <Doc2 /> */}
 
+      {/* <MapStateToProp cake/>
+      <MapStateToProp />
       <CakeContainer />
+      <HooksCakeContainer />
+      <IceContainer />
+      <NewContainer /> */}
+      <UserContainer />
 
     </div>
 

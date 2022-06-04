@@ -12,10 +12,11 @@ function CakeContainer(props)
     )
 }
 
-const mapStateToProps= state=>
+const mapStateToProps= state=> //takes redux state as parameter
 {
     return{
-        noOfCakes:state.noOfCakes  //for complex things use selectors
+        noOfCakes:state.cake.noOfCakes  //then use as props in our component
+        //for complex things use selectors,,,use state.ice.noOfCake as it has root reducer key value of cake
     }
 }
 

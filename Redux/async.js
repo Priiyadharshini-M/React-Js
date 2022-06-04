@@ -58,7 +58,7 @@ const reducer=(state=initialState,action)=> //reducer
     }
 }
 
-const fetchingUsers=()=> //
+const fetchingUsers=()=> 
 {
     return function(dispatch){
         dispatch(fetchRequest())
